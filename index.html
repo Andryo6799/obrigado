@@ -158,41 +158,31 @@
             width: 24px;
             height: 24px;
         }
-
-        /* ========================================== */
-        /* COLE O CÓDIGO DO SEU PIXEL AQUI ABAIXO     */
-        /* (Remova os comentários quando inserir)     */
-        <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '829228166938008');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=829228166938008&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-               
-        // Disparo do evento de Lead
-
-        fbq('track', 'Lead');
-        </script>
-        */
-        
-        /* ========================================== */
     </style>
-</head>
 
-<script>
-  fbq('track', 'Lead');
-</script>
+    <!-- ========================================== -->
+    <!-- Meta Pixel Code CORRIGIDO -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    fbq('init', '829228166938008');
+    fbq('track', 'PageView');
+    fbq('track', 'Lead'); // Disparo do evento de Lead inserido corretamente aqui
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=829228166938008&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel Code -->
+    <!-- ========================================== -->
+
+</head>
 
 <body>
     <div class="container">
